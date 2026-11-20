@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; font-family: Nunito, system-ui, sans-serif; color: #55354a; background: radial-gradient(circle at top left, #ffe5f1, transparent 45%), linear-gradient(135deg, #fff7fb, #f8e9ff); overflow: hidden; }
+.card { position: relative; z-index: 1; width: min(100%, 430px); padding: 36px 28px; text-align: center; border: 1px solid #ffffffb8; border-radius: 28px; background: #ffffffc9; box-shadow: 0 18px 55px #c88bb52a; backdrop-filter: blur(12px); animation: appear .7s ease both; }
+.flower { font-size: 48px; animation: bob 3s ease-in-out infinite; }
+.eyebrow { margin: 8px 0 10px; text-transform: uppercase; letter-spacing: 3px; font-size: 11px; color: #b56d99; font-weight: 800; }
+h1 { margin: 0; font-size: clamp(27px, 7vw, 36px); line-height: 1.2; }
+.intro { color: #8a6a82; line-height: 1.6; margin: 16px 0 24px; }
+button { border: 0; border-radius: 999px; padding: 13px 25px; background: linear-gradient(135deg, #ff86b8, #c78cff); color: white; font: inherit; font-weight: 800; cursor: pointer; box-shadow: 0 8px 22px #d98bb34d; transition: transform .2s, box-shadow .2s; }
+button:hover { transform: translateY(-2px); box-shadow: 0 11px 26px #d98bb35c; } button:active { transform: scale(.97); }
+.message { margin-top: 22px; padding: 18px; border-radius: 20px; background: #fff2f8; animation: appear .5s ease both; line-height: 1.65; }
+.message p { margin: 7px 0; } .sparkle { font-size: 30px; } .small { font-size: 13px; color: #a07894; }
+.hearts { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+.heart { position: absolute; bottom: -35px; opacity: .5; animation: floatUp linear forwards; }
+@keyframes floatUp { to { transform: translateY(-110vh) rotate(25deg); opacity: 0; } }
+@keyframes appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bob { 50% { transform: translateY(-6px); } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; } }
